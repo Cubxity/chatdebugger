@@ -13,7 +13,7 @@ import net.minecraft.class_7614
 class MessageHeaderNode(private val header: class_7614) : TreeNode() {
     init {
         addChild(MessageSignatureNode(header.previousSignature, "previousSignature"))
-        addChild(UUIDNode(header.sender, "sender"))
+        addChild(LiteralNode(header.sender, "sender"))
     }
 
     override fun getPrimaryComponent(): UIComponent {

@@ -16,7 +16,10 @@ class ReceivedMessageNode(private val message: ReceivedMessage) : TreeNode() {
     init {
         when (message) {
             is ChatMessage -> {
+                addChild(GameProfileNode(message.profile))
+                addChild(TextComponentNode(message.displayName))
                 addChild(SignedMessageNode(message.message))
+                addChild(LiteralNode(message.trustStatus, "trustStatus"))
             }
         }
     }
