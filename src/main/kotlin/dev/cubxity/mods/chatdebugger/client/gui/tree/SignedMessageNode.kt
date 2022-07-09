@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import net.minecraft.network.message.SignedMessage
 
 class SignedMessageNode(private val message: SignedMessage) : TreeNode() {
@@ -20,6 +21,7 @@ class SignedMessageNode(private val message: SignedMessage) : TreeNode() {
     override fun getPrimaryComponent(): UIComponent {
         return UIText("SignedHeader").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 

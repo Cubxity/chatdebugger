@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import net.minecraft.client.report.ReceivedMessage
 import net.minecraft.client.report.ReceivedMessage.ChatMessage
 import net.minecraft.client.report.ReceivedMessage.GameMessage
@@ -28,6 +29,7 @@ class ReceivedMessageNode(private val message: ReceivedMessage) : TreeNode() {
         }
         return UIText("ReceivedMessage ($text)").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 

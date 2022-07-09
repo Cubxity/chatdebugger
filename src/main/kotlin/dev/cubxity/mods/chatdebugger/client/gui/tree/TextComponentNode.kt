@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import net.minecraft.text.Text
 
 class TextComponentNode(
@@ -16,6 +17,7 @@ class TextComponentNode(
     override fun getPrimaryComponent(): UIComponent {
         return UIText("$label: ${text ?: "(empty)"}").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 

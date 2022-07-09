@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import net.minecraft.class_7614
 
 class MessageHeaderNode(private val header: class_7614) : TreeNode() {
@@ -18,6 +19,7 @@ class MessageHeaderNode(private val header: class_7614) : TreeNode() {
     override fun getPrimaryComponent(): UIComponent {
         return UIText("MessageHeader").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 

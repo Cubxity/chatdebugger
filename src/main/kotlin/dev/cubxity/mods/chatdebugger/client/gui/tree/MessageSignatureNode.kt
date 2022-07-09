@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import net.minecraft.network.message.MessageSignature
 import java.util.*
 
@@ -18,6 +19,7 @@ class MessageSignatureNode(
         val text = signature?.let { Base64.getEncoder().encodeToString(signature.comp_925) } ?: "(empty)"
         return UIText("$label: $text").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 

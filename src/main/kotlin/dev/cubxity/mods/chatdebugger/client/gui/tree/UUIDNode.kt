@@ -7,6 +7,7 @@ import gg.essential.elementa.components.UIText
 import gg.essential.elementa.components.inspector.ArrowComponent
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.dsl.constrain
+import gg.essential.elementa.dsl.pixels
 import java.util.*
 
 class UUIDNode(
@@ -16,6 +17,7 @@ class UUIDNode(
     override fun getPrimaryComponent(): UIComponent {
         return UIText("$label: $uuid").constrain {
             x = SiblingConstraint()
+            y = 1.pixels
         }
     }
 
